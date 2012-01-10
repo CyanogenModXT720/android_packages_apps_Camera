@@ -19,6 +19,7 @@ package com.android.camera;
 import android.content.BroadcastReceiver;
 import android.content.Context;
 import android.content.Intent;
+import android.util.Log;
 
 /**
  * {@code MediaModeButtonIntentReceiver} is invoked when the media mode button is
@@ -32,10 +33,11 @@ import android.content.Intent;
  * In next version i will add switcher. 
  */
 
-public class MediaModeIntentReceiver extends BroadcastReceiver {
+public class MediaModeButtonIntentReceiver extends BroadcastReceiver {
 
     @Override
     public void onReceive(Context context, Intent intent) {
+	Log.i("MediaButtonReceiver","event recieved");
         // Try to get the camera hardware
         CameraHolder holder = CameraHolder.instance();
         ComboPreferences pref = new ComboPreferences(context);
