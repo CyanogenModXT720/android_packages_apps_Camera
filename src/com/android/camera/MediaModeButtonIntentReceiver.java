@@ -19,6 +19,7 @@ package com.android.camera;
 import android.content.BroadcastReceiver;
 import android.content.Context;
 import android.content.Intent;
+import android.content.ComponentName; 
 import android.app.ActivityManager;
 import android.util.Log;
 import java.util.List; 
@@ -45,8 +46,8 @@ public class MediaModeButtonIntentReceiver extends BroadcastReceiver {
     private void startGallery(Context paramContext)
 	{
 		Intent i = new Intent(Intent.ACTION_GET_CONTENT);
-		i.setType("image/*");
-                i.setFlags(Intent.FLAG_ACTIVITY_NEW_TASK | Intent.FLAG_ACTIVITY_CLEAR_TOP);
+        i.setComponent(ComponentName.unflattenFromString("com.cooliris.media/.Gallery"));
+	    i.addCategory("android.intent.category.LAUNCHER");
 		paramContext.startActivity(i);
 	}
 
