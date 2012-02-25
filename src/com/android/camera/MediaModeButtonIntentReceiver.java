@@ -50,6 +50,7 @@ public class MediaModeButtonIntentReceiver extends BroadcastReceiver {
 		paramContext.startActivity(i);
 	}
 
+
     private void startCamera(Context paramContext)
 	{
 		Intent i = new Intent(Intent.ACTION_MAIN);
