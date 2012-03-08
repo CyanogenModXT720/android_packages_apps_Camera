@@ -47,7 +47,7 @@ public class MediaModeButtonIntentReceiver extends BroadcastReceiver {
 	{
 		Intent i = new Intent(Intent.ACTION_GET_CONTENT);
         i.setComponent(ComponentName.unflattenFromString("com.cooliris.media/.Gallery"));
-	    i.addCategory("android.intent.category.LAUNCHER");
+	    i.addCategory(Intent.CATEGORY_LAUNCHER);
 		paramContext.startActivity(i);
 	}
 
